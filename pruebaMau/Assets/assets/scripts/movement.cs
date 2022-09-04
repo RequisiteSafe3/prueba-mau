@@ -26,7 +26,7 @@ public class movement : MonoBehaviour
     [SerializeField] private int jumpsLeft;
 
     [Header("Dash")]
-    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashJump;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashGravity;
     [SerializeField] private float dashCooldown;
@@ -108,13 +108,13 @@ public class movement : MonoBehaviour
         maxJumps = maxJumps + 1;
         float oG = rb2D.gravityScale; //oG means original gravity, just a personal adjustment. :)
         rb2D.gravityScale = dashGravity;
-        jumpForce = (jumpForce / 1.3f);
+        jumpForce = (jumpForce / dashJump);
         tr.emitting = true; //Turns te trail on.
         yield return new WaitForSeconds(dashTime); //yield return makes the co-routine to not last forever, we assign the time by creating a timer by seconds.
         tr.emitting = false;
         isDashing = false;
         rb2D.gravityScale = oG;
-        jumpForce = (jumpForce * 1.3f);
+        jumpForce = (jumpForce * dashJump);
         maxJumps = maxJumps - 1;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
