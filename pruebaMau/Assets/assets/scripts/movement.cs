@@ -30,6 +30,7 @@ public class movement : MonoBehaviour
     [SerializeField] private float dashTime;
     [SerializeField] private float dashGravity;
     [SerializeField] private float dashCooldown;
+    [SerializeField] private float maxFallingSpeed;
     private bool canDash = true;
     private bool isDashing;
     
@@ -59,7 +60,10 @@ public class movement : MonoBehaviour
             jumpsLeft = jumpsLeft - 1;
             rb2D.velocity = new Vector2(rb2D.velocity.x, 0f);
             rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }        
+        }    
+        if (rb2D.velocity.y <= -maxFallingSpeed && isDashing) {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, -maxFallingSpeed);
+        }    
     }
 
     void horizontalMovement() {
@@ -75,12 +79,23 @@ public class movement : MonoBehaviour
                 runMultiplier = multiplierValue;
                 animator.SetBool("walk", false); /* Animator */
                 animator.SetBool("run", true); /* Animator */
+                if (isDashing) { // Dashing.
+                    runMultiplier = multiplierValue * 1.25f;
+                    animator.SetBool("walk", false); /* Animator */
+                    animator.SetBool("run", true); /* Animator */
+                }
+            }
+            else if (isDashing) { // Dashing.
+                runMultiplier = multiplierValue * 1.25f;
+                animator.SetBool("walk", false); /* Animator */
+                animator.SetBool("run", true); /* Animator */
             }
             else {
                 runMultiplier = 1f;
                 animator.SetBool("walk", true); /* Animator */
                 animator.SetBool("run", false); /* Animator */
             }
+
             animator.SetBool("idle", false); /* Animator */
             rb2D.velocity = new Vector2(movementInput * runSpeed * runMultiplier, rb2D.velocity.y);
 
