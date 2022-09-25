@@ -86,7 +86,7 @@ public class movement : MonoBehaviour
                 }
             }
             else if (isDashing) { // Dashing.
-                runMultiplier = multiplierValue * 1.25f;
+                runMultiplier = multiplierValue * 1.1f;
                 animator.SetBool("walk", false); /* Animator */
                 animator.SetBool("run", true); /* Animator */
             }
