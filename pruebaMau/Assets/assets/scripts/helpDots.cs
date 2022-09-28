@@ -8,7 +8,6 @@ public class helpDots : MonoBehaviour
     private bool TRange = false;
     [SerializeField] private GameObject Object;
 
-
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
             Object.gameObject.SetActive(true);

@@ -58,12 +58,20 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0) {
             jumpsLeft = jumpsLeft - 1;
+            if (!isDashing) {
             rb2D.velocity = new Vector2(rb2D.velocity.x, 0f);
+            }
             rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }    
         if (rb2D.velocity.y <= -maxFallingSpeed && isDashing) {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, -maxFallingSpeed);
-        }    
+            if (!Input.GetKey(KeyCode.S)) {
+                rb2D.velocity = new Vector2(rb2D.velocity.x, -maxFallingSpeed); 
+                rb2D.gravityScale = dashGravity;
+            }   
+            else {
+                rb2D.gravityScale = dashGravity * 2;
+            }
+        }
     }
 
     void horizontalMovement() {
@@ -86,7 +94,7 @@ public class movement : MonoBehaviour
                 }
             }
             else if (isDashing) { // Dashing.
-                runMultiplier = multiplierValue * 1.1f;
+                runMultiplier = multiplierValue * 1.2f; /* Dashing speed multiplier */
                 animator.SetBool("walk", false); /* Animator */
                 animator.SetBool("run", true); /* Animator */
             }
