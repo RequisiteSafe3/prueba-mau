@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94c1d3b9ed453324ebe926b180b46a8d
+guid: 0c989a19560bfea4c852a8e4b8071ce6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_0
+      name: walk2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43d15dc1bf2c26349b845d15d32d9cc9
-      internalID: 558571231
+      spriteID: 6b1fabd5d09a5804d93c92764c567389
+      internalID: -672157242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_1
+      name: walk2_1
       rect:
         serializedVersion: 2
         x: 48
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44613e9d9461b5b4f9b2a27566134c89
-      internalID: -1058936792
+      spriteID: adb0dd9f00cb15a4ab48666294d46bf5
+      internalID: 398770521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_2
+      name: walk2_2
       rect:
         serializedVersion: 2
         x: 96
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd838e3f54b5455429e8f98926d8760c
-      internalID: -1189974046
+      spriteID: 159d5d527d54f2540b1359f5f0576aee
+      internalID: 51923397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_3
+      name: walk2_3
       rect:
         serializedVersion: 2
         x: 144
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 392f924f12a72b14286092dd11b3d64a
-      internalID: -338049603
+      spriteID: 105739f13a440c54ca3f31cd0ec91438
+      internalID: -1146643118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_4
+      name: walk2_4
       rect:
         serializedVersion: 2
         x: 192
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5852b421316dbc40b226e25df5a3916
-      internalID: -2141998017
+      spriteID: 145c7b39ea3930d4386a84cd7a31f849
+      internalID: 1523126419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_5
+      name: walk2_5
       rect:
         serializedVersion: 2
         x: 240
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d25f34a1fc6594dbb11f6945fa11a6
-      internalID: -485004061
+      spriteID: 815b63dcda1f7bd49853f505e978cff2
+      internalID: -1249619674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_6
+      name: walk2_6
       rect:
         serializedVersion: 2
         x: 288
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32fe5475766770e45ae630b2d304f022
-      internalID: -1111688708
+      spriteID: 6fa2fe5144f575d49879d69fbb18d279
+      internalID: 1137472772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_7
+      name: walk2_7
       rect:
         serializedVersion: 2
         x: 336
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dca9faea4d302a479082320b19ba26b
-      internalID: -1974632606
+      spriteID: 4d49c6530ceca6b48b0d127e72767696
+      internalID: 944795195
       vertices: []
       indices: 
       edges: []
@@ -283,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_5: -485004061
-      walk_3: -338049603
-      walk_6: -1111688708
-      walk_7: -1974632606
-      walk_1: -1058936792
-      walk_0: 558571231
-      walk_2: -1189974046
-      walk_4: -2141998017
+      walk2_5: -1249619674
+      walk2_4: 1523126419
+      walk2_6: 1137472772
+      walk2_7: 944795195
+      walk2_0: -672157242
+      walk2_1: 398770521
+      walk2_2: 51923397
+      walk2_3: -1146643118
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
